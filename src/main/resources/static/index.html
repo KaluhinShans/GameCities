@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+
+ <body>
+
+ <div class="navbar navbar-inverse navbar-fixed-top headroom">
+     <div class="container">
+         <div class="navbar-fixed-top">
+             <label>Creator: Shans Kaluhin</label>
+         </div>
+
+         <div class="navbar-header">
+             <h2 style=" display:none"> Твой счет:
+                 <label style="color:limegreen" id="score">0</label>
+             </h2>
+         </div>
+
+         <div class="navbar-collapse collapse">
+             <ul class="nav navbar-nav pull-right">
+                 <li><a href="leaders.html">Лидеры</a></li>
+                 <li style="display: none" id="save" onclick="endGame()"><a class="btn">Сохранить</a></li>
+             </ul>
+
+         </div>
+     </div>
+ </div>
+
+ <div class="parent">
+     <div class="block" id="startForm">
+         <h1>Города</h1>
+         <br>
+         <button class= "btn btn-action btn-lg" onclick="startGame()">Play</button>
+     </div>
+
+
+     <div class="blockHidden" id="gameForm">
+         <h1 id="botAnswer"></h1>
+         <label>Тебе на "</label>
+         <label id="lastLetter"></label>
+         <label>"</label>
+         <input required type="text" autocomplete="off" class="form-control" id="playerAnswer">
+         <br>
+         <button class="btn btn-action"  onclick="sendPlayerAnswer()">Ответить</button>
+     </div>
+
+     <div class="blockHidden" id="saveForm">
+         <h2>Твой результат:  <label id="saveScore"></label></h2>
+         <br>
+         <label>Введи свое имя:</label>
+         <input required type="email" autocomplete="off" class="form-control" id="leaderName">
+         <br>
+         <button class="btn btn-action" type="submit" onclick="saveLeader()">Сохранить</button>
+         <button class="btn btn-action"  onclick="continueGame()">Играть дальше</button>
+     </div>
+
+ </div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+ <script src="js/leaders.js"></script>
+
+ </body>
+</html>
